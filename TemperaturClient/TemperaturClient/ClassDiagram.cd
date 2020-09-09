@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TemperaturClient.AsyncSocketClient">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAIAAAAAAAAACAAAAAAAAAUAAAAMABAAAAAA=</HashCode>
+      <FileName>Classes\AsyncSocketClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TemperaturClient.Controller" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAgAAAAgBAAIAAA=</HashCode>
+      <FileName>Classes\Controller.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TemperaturClient.Model" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Model.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TemperaturClient.FormMain">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="TemperaturClient.FormMain.PlottedPoint" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>FormMain.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ABgAQAAAADAAArAgAEKAAAACIQgAAAACAAIAAAgQAAA=</HashCode>
+      <FileName>FormMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TemperaturClient.Program">
+    <Position X="10.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TemperaturClient.Properties.Resources">
+    <Position X="7" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TemperaturClient.Properties.Settings">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TemperaturClient.Usercontrols.UsercontrolGraph">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACCAIBBACAAABAAIAKAAAACAAAAACAAAAAAAgIAAQo=</HashCode>
+      <FileName>Usercontrols\UsercontrolGraph.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TemperaturClient.Usercontrols.UserControlTempList">
+    <Position X="14.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABACAAABAAAACAAAACAQAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Usercontrols\UserControlTempList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="TemperaturClient.Request">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAQAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\AsyncSocketClient.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="TemperaturClient.Temperatur">
+    <Position X="8.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\AsyncSocketClient.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="TemperaturClient.RangeRequest">
+    <Position X="10.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\AsyncSocketClient.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="TemperaturClient.IController">
+    <Position X="14.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Interfaces\IController.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TemperaturClient.IModel">
+    <Position X="14.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="TemperaturClient.RequestType">
+    <Position X="12.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\AsyncSocketClient.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

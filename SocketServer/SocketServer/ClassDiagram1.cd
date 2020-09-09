@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SocketServer.AsyncSerialListener">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAgAAACAAAAAAAAAAAAAAAIAAAAAgAAQAAgACAAAA=</HashCode>
+      <FileName>AsyncSerialListener.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SocketServer.AsyncSocketListener">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAIIAAoAAAAAAAAQAAAQUAAAQIAAAAAAIA=</HashCode>
+      <FileName>AsyncSocketListener.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SocketServer.FormMain">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAQDAABBAAAACAAAAiAAAIAAAABAICAAAAAAA=</HashCode>
+      <FileName>FormMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SocketServer.Program">
+    <Position X="9" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SocketServer.Classes.Controller" BaseTypeListCollapsed="true">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAQIAAAAgQAQAAAAAIAAA=</HashCode>
+      <FileName>Classes\Controller.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SocketServer.Classes.Database">
+    <Position X="13.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAgAAAAAABAAAQAAAAAABAEAAAAAAAA=</HashCode>
+      <FileName>Classes\Database.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SocketServer.Classes.Model" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAQAQAAAAAAAAA=</HashCode>
+      <FileName>Classes\Model.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SocketServer.Classes.View" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAEAAAoAAAABAAAAAAAAA=</HashCode>
+      <FileName>Classes\View.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SocketServer.Properties.Resources">
+    <Position X="11.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SocketServer.Properties.Settings">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="SocketServer.Request">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAQAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>AsyncSocketListener.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SocketServer.Temperatur">
+    <Position X="7" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>AsyncSocketListener.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SocketServer.RangeRequest">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AsyncSocketListener.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="SocketServer.Interfaces.IController">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAQAAAAAgQAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IController.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SocketServer.Interfaces.IModel">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SocketServer.Interfaces.IView">
+    <Position X="4.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAoAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IView.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="SocketServer.RequestType">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AsyncSocketListener.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
