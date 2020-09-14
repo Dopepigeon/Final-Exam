@@ -1,0 +1,140 @@
+using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using static MicrocontrollerClient.FormMain;
+
+namespace MicrocontrollerClient
+{
+    public static class DatabaseConnector
+    {
+        private static string connectionString = "server=localhost;database=temperaturverlauf;uid=root;pwd=;";
+
+        public struct Range
+        {
+            public DateTime timestamp;
+            public int id;
+
+            public Range(DateTime timestamp, int id)
+            {
+                this.id = id;
+                this.timestamp = timestamp;
+            }
+        }
+
+        public static void SaveTempRange(List<Temperatur> tempList)
+        {
+            int cunt = 0;
+
+            try
+            {
+                var connection = OpenConnection();
+                long id = AddTempRange(connection, tempList[0].dateTime);
+
+                string query = "INSERT INTO temperaturevalues(rangeID, timestamp, temp) VALUES(@rangeID, @timestamp, @temp)";
+
+                foreach (var temp in tempList)
+                {
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+                    cmd.Prepare();
+                    cmd.Parameters.AddWithValue("@rangeID", id);
+                    cmd.Parameters.AddWithValue("@timestamp", temp.dateTime);
+                    cmd.Parameters.AddWithValue("@temp", temp.temp);
+                    cmd.ExecuteNonQuery();
+                    cunt++;
+                }
+                CloseConnection(connection);
+            }
+            catch (Exception ex) { }
+            Console.WriteLine(cunt);
+        }
+
+        private static long AddTempRange(MySqlConnection connection, DateTime timestamp)
+        {
+            string query = "INSERT INTO temperatureranges(timestamp) VALUES(@timestamp)";
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.Prepare();
+            cmd.Parameters.AddWithValue("@timestamp", timestamp);
+            cmd.ExecuteNonQuery();
+            return cmd.LastInsertedId;
+        }
+
+        public static List<Temperatur> GetTempValues(int id)
+        {
+            List<Temperatur> temperatures = new List<Temperatur>();
+            var connection = OpenConnection();
+
+            try
+            {
+                string query = "SELECT * FROM temperaturevalues WHERE rangeID = @rangeID";
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.Prepare();
+                cmd.Parameters.AddWithValue("@rangeID", id);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    temperatures.Add(new Temperatur(reader.GetDouble("temp"), reader.GetDateTime("timestamp")));
+                }
+
+                CloseConnection(connection);
+            }
+            catch (Exception) { }
+            return temperatures;
+        }
+
+        public static List<Range> GetRanges()
+        {
+            List<Range> ranges = new List<Range>();
+            try
+            {
+                var connection = OpenConnection();
+                string query = "SELECT * FROM temperatureranges";
+
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.Prepare();
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int id = reader.GetInt32("rangeID");
+                    DateTime timestamp = reader.GetDateTime("timestamp");
+                    ranges.Add(new Range(timestamp, id));
+                }
+                CloseConnection(connection);
+            }
+            catch (Exception) { }
+            return ranges;
+        }
+
+        private static MySqlConnection OpenConnection()
+        {
+            MySqlConnection mySqlConnection = new MySqlConnection(connectionString);
+
+            try
+            {
+                mySqlConnection.Open();
+                return mySqlConnection;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        private static void CloseConnection(MySqlConnection mySqlConnection)
+        {
+            try
+            {
+                mySqlConnection.Close();
+                mySqlConnection.Dispose();
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+    }
+}
