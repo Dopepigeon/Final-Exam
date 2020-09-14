@@ -1,0 +1,87 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.0.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Erstellungszeit: 14. Sep 2020 um 12:16
+-- Server-Version: 10.4.6-MariaDB
+-- PHP-Version: 7.3.9
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Datenbank: `temperaturverlauf`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `temperatureranges`
+--
+
+CREATE TABLE `temperatureranges` (
+  `rangeID` int(11) NOT NULL,
+  `timestamp` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `temperaturevalues`
+--
+
+CREATE TABLE `temperaturevalues` (
+  `tempID` int(11) NOT NULL,
+  `rangeID` int(11) NOT NULL,
+  `timestamp` datetime NOT NULL,
+  `temp` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-
+
+--
+-- Indizes der exportierten Tabellen
+--
+
+--
+-- Indizes für die Tabelle `temperatureranges`
+--
+ALTER TABLE `temperatureranges`
+  ADD PRIMARY KEY (`rangeID`);
+
+--
+-- Indizes für die Tabelle `temperaturevalues`
+--
+ALTER TABLE `temperaturevalues`
+  ADD PRIMARY KEY (`tempID`);
+
+--
+-- AUTO_INCREMENT für exportierte Tabellen
+--
+
+--
+-- AUTO_INCREMENT für Tabelle `temperatureranges`
+--
+ALTER TABLE `temperatureranges`
+  MODIFY `rangeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT für Tabelle `temperaturevalues`
+--
+ALTER TABLE `temperaturevalues`
+  MODIFY `tempID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=930;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
